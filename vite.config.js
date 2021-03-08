@@ -4,9 +4,7 @@ import visualizer from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
 export default {
-  plugins: [
-    vue(),
-  ],
+  plugins: [vue()],
   esbuild: {
     jsxFactory: "h",
     jsxFragment: "Fragment",
@@ -14,9 +12,9 @@ export default {
   resolve: {
     alias: {
       "/antdv": path.resolve("./node_modules/ant-design-vue"),
-      "/@": path.resolve("./src")
+      "/@": path.resolve("./src"),
     },
-    dedupe: ["vue"]
+    dedupe: ["vue"],
   },
   build: {
     lib: {
@@ -35,7 +33,7 @@ export default {
         // for externalized deps
         globals: {
           vue: "Vue",
-          "ant-design-vue": "Antd"
+          "ant-design-vue": "Antd",
         },
       },
     },
